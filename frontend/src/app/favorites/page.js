@@ -41,7 +41,7 @@ export default function FavoritesPage() {
                         ))}
                     </motion.div>
                 ) : (
-                    <p className="text-center text-gray-600 mt-10">You haven't saved any favorite recipes yet.</p>
+                    <p className="text-center text-gray-600 mt-10">You haven&apos;t saved any favorite recipes yet.</p>
                 )}
             </div>
              <AnimatePresence>

@@ -122,7 +122,7 @@ export default function HomePage() {
                 <main className="container mx-auto px-4 pb-12">
                      {isSearching ? (
                         <div className="flex justify-between items-center mb-6">
-                           <h2 className="text-3xl font-bold text-gray-800">Search Results for "{searchQuery}"</h2>
+                          <h2 className="text-3xl font-bold text-gray-800">Search Results for &quot;{searchQuery}&quot;</h2>
                            <button onClick={clearSearch} className="text-pink-500 font-semibold hover:underline">Clear Search</button>
                         </div>
                      ) : (

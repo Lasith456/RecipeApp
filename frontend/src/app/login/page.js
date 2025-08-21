@@ -75,7 +75,7 @@ export default function LoginPage() {
                         {loading ? 'Logging In...' : 'Log In'}
                     </button>
                     <p className="text-center text-sm text-gray-600">
-                        Don't have an account? <Link href="/register" className="text-pink-500 hover:underline font-semibold">Sign up</Link>
+                        Don&apos;t have an account? <Link href="/register" className="text-pink-500 hover:underline font-semibold">Sign up</Link>
                     </p>
                 </form>
             </motion.div>

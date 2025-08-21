@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
 import api from '@/lib/api';
+import Image from 'next/image';
 
-// Icons
 const HeartIcon = ({ className = "w-6 h-6" }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}><path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-1.383-.597 15.218 15.218 0 0 1-2.203-1.33c-.326-.22-.652-.451-.973-.682A5.005 5.005 0 0 1 6 15a5.005 5.005 0 0 1-2.5-4.243V9.752a5.25 5.25 0 0 1 3.25-4.941c1.453-.498 3.043.226 4.25 1.364a5.25 5.25 0 0 1 4.25-1.364c1.453.498 3.043 1.226 3.25 4.941V10.757a5.005 5.005 0 0 1-2.5 4.243c-.321.231-.647.462-.973.682a15.218 15.218 0 0 1-2.203 1.33 15.247 15.247 0 0 1-1.383.597l-.022.012-.007.003Z" /></svg>
 );
@@ -81,7 +81,14 @@ export default function RecipeModal({ recipeId, onClose }) {
                 ) : recipe && (
                      <div>
                         <div className="relative">
-                            <img src={recipe.strMealThumb} alt={recipe.strMeal} className="w-full h-64 object-cover rounded-t-2xl" />
+                           <Image
+                                src={recipe.strMealThumb}
+                                alt={recipe.strMeal}
+                                width={800}
+                                height={800}
+                                className="w-full h-64 object-cover rounded-t-2xl"
+                                unoptimized // <-- Add this prop
+                            />
                             <button onClick={onClose} className="absolute top-4 right-4 bg-white/70 rounded-full p-2 text-gray-800 hover:bg-white transition-colors">
                                 <XMarkIcon className="w-6 h-6" />
                             </button>
