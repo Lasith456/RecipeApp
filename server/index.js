@@ -24,10 +24,8 @@ app.use(cookieParser());
 
 connectDB();
 
-// --- Setup for serving the frontend ---
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-// 2. Point to the frontend's build folder
 app.use(express.static(path.join( "../frontend/out"))); 
 
 app.use('/api/auth', authRoutes);
