@@ -28,7 +28,7 @@ connectDB();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // 2. Point to the frontend's build folder
-app.use(express.static(path.join(__dirname, '../frontend/out'))); 
+app.use(express.static(path.join( "../frontend/out"))); 
 
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
